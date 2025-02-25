@@ -16,7 +16,7 @@ app.use('/api/recipes', recipeRoutes);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb://127.0.0.1:27017/recipes')
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.error(err));
 
